@@ -29,6 +29,7 @@ RUN apt-get update -qq \
     flex \
     gawk \
     gcc \
+    g++ \
     git \
     iverilog \
     pkg-config \
