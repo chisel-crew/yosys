@@ -41,8 +41,7 @@ COPY . /yosys
 ENV PREFIX /opt/yosys
 
 RUN cd /yosys \
- && git config --global --add safe.directory /yosys \
- && git config --global --add safe.directory /yosys/abc \
+ && chown -R $(whoami) /yosys \
  && git submodule update --init --recursive \
  && make \
  && make install
